@@ -1,0 +1,107 @@
+@font-face {
+    font-family: "Poppins Regular";
+    src: url(assets/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Poppins Medium";
+    src: url(assets/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Poppins Bold";
+    src: url(assets/Poppins-Bold.ttf);
+}
+
+*, html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins Regular";
+}
+
+.content {
+    display: flex;
+    gap: 5rem;
+    padding: 3rem 5rem;
+}
+
+.photo {
+    height: 30rem;
+    width: 30rem;
+}
+
+.right-side {
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.name {
+    font-family: "Poppins Medium";
+    font-size: 1.7rem;
+    color: #3d3d3d;
+}
+
+.highlight {
+    font-family: "Poppins Bold";
+    font-size: 5rem;
+    line-height: 1.2;
+    background-image: linear-gradient(122deg, rgba(41,88,255,1) 0%, rgba(191,111,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+.about {
+    font-family: "Poppins Medium";
+    font-size: 1.7rem;
+    color: #959191;
+}
+
+.quick-tools {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.social {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    outline: none;
+    border: none;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-image: linear-gradient(122deg, rgba(41,88,255,1) 0%, rgba(191,111,255,1) 100%);
+    transition: all 250ms ease-out;
+}
+
+.social img {
+    width: 75%;
+}
+
+.projects {
+    font-family: "Poppins Medium";
+    cursor: pointer;
+    padding: 0.2rem 1rem;
+    outline: none;
+    border: 3px solid;
+    font-size: 1.3rem;
+    border-radius: 20px;
+    background-color: transparent;
+    background-image: linear-gradient(122deg, rgba(41,88,255,1) 0%, rgba(191,111,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    border-image-slice: 1;
+    border-image-source: linear-gradient(122deg, rgba(41,88,255,1) 0%, rgba(191,111,255,1) 100%);
+    transition: all 250ms ease-out;
+}
+
+.social:hover, .projects:hover{
+    opacity: 0.5;
+    scale: 1.1;
+}
