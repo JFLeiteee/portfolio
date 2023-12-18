@@ -1,0 +1,277 @@
+/* FONTS DONWLOAD */
+@font-face {
+  font-family: "Poppins Regular";
+  src: url(assets/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Poppins Medium";
+  src: url(assets/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Poppins Bold";
+  src: url(assets/Poppins-Bold.ttf);
+}
+
+/* GLOBAL CONFIGURATION */
+*, html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins Regular";
+}
+
+body {
+  height: 100vh;
+}
+
+/* UTILITIES CLASSES */
+.block {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+.blur {
+  filter: blur(0.2rem);
+}
+
+/* MAIN CONTENT */
+.content {
+  display: flex;
+  justify-content: center;
+  gap: 5em;
+  padding: 3em 5em;
+  flex-wrap: wrap;
+  transition: all 75ms ease-in-out;
+  height: 100svh;
+}
+
+/* DEV PHOTO */
+.photo {
+  max-width: 100%;
+  min-width: 40%;
+  max-height: 100%;
+}
+
+/* LEFT SIDE OF THE FLEX */
+.left-side {
+  height: auto;
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+/* RIGHT SIDE OF THE FLEX */
+.right-side {
+  min-width: 1rem;
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* DEV NAME */
+.name {
+  font-family: "Poppins Medium";
+  font-size: 4vmin;
+  color: #3d3d3d;
+}
+
+/* OCCUPATION */
+.highlight {
+  font-family: "Poppins Bold";
+  font-size: 9.5vmin;
+  line-height: 1.2;
+  background-image: linear-gradient(122deg, rgba(41,88,255,1) 0%, rgba(191,111,255,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+/* ABOUT DEV */
+.about {
+  font-family: "Poppins Medium";
+  font-size: 4vmin;
+  color: #959191;
+}
+
+/* SOCIAL MEDIA GROUP */
+.quick-tools {
+  margin-top: 1em;
+  display: flex;
+  gap: 1em;
+}
+
+/* SOCIAL MEDIA BUTTON */
+.social {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  max-height: 2.5rem;
+  min-height: 2rem;
+  outline: none;
+  border: none;
+  aspect-ratio: 1;
+  border-radius: 5rem;
+  background-image: linear-gradient(122deg, rgba(41,88,255,1) 0%, rgba(191,111,255,1) 100%);
+  transition: all 250ms ease-out;
+}
+
+/* SOCIAL MEDIA ICON */
+.social img {
+  max-width: 75%;
+  min-width: 40%;
+}
+
+/* GITHUB TAG USED ON HOVER */
+#github::after {
+  position: absolute;
+  content: "Github";
+  width: fit-content;
+  height: 1rem;
+  padding: 0.2rem;
+  opacity: 0;
+  color: #fafafa;
+  border-radius: 2.5px;
+  background-image: linear-gradient(122deg, rgba(41,88,255,1) 0%, rgba(191,111,255,1) 100%);
+  transition: all 250ms ;
+}
+
+#github:hover::after {
+  opacity: 1;
+  margin-top: 4.5rem;
+}
+
+/* LINKEDIN TAG USED ON HOVER */
+#linkedin::after {
+  position: absolute;
+  content: "Linkedin";
+  width: fit-content;
+  height: 1rem;
+  padding: 0.2rem;
+  opacity: 0;
+  color: #fafafa;
+  border-radius: 2.5px;
+  background-image: linear-gradient(122deg, rgba(41,88,255,1) 0%, rgba(191,111,255,1) 100%);
+  transition: all 250ms ;
+}
+
+#linkedin:hover::after {
+  opacity: 1;
+  margin-top: 4.5rem;
+}
+
+/* CURRICULUM TAG USED ON HOVER */
+#curriculum::after {
+  position: absolute;
+  content: "Curriculum";
+  width: fit-content;
+  height: 1rem;
+  padding: 0.2rem;
+  opacity: 0;
+  color: #fafafa;
+  border-radius: 2.5px;
+  background-image: linear-gradient(122deg, rgba(41,88,255,1) 0%, rgba(191,111,255,1) 100%);
+  transition: all 250ms ;
+}
+
+#curriculum:hover::after {
+  opacity: 1;
+  margin-top: 4.5rem;
+}
+
+/* PROJECTS BUTTON */
+.projects {
+  font-family: "Poppins Medium";
+  cursor: pointer;
+  padding: 0.2rem 1rem;
+  outline: none;
+  border: 3px solid;
+  font-size: 3.5vmin;
+  border-radius: 20px;
+  background-color: transparent;
+  background-image: linear-gradient(122deg, rgba(41,88,255,1) 0%, rgba(191,111,255,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  border-image-slice: 1;
+  border-image-source: linear-gradient(122deg, rgba(41,88,255,1) 0%, rgba(191,111,255,1) 100%);
+  transition: all 250ms ease-out;
+}
+
+/* HOVER EFFECTS */
+.social:hover, .projects:hover{
+  scale: 1.1;
+}
+
+/* CURRICULUM MODAL */
+.modal {
+  position: absolute;
+  top: 10rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 25rem;
+  min-width: 5rem;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 20px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 30px -11px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 30px -11px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 30px -11px rgba(0,0,0,0.75);
+}
+
+.modal h1 {
+  background-image: linear-gradient(122deg, rgba(41,88,255,1) 0%, rgba(191,111,255,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.modal-content {
+  display: flex;
+  margin-top: 1rem;
+  gap: 5rem;
+}
+
+/* DONWLOAD ICON */
+.icon {
+  width: 2rem;
+  height: auto;
+  max-width: 10rem;
+}
+
+.icon:hover {
+  margin-bottom: -1.5rem;
+  transform: scale(1.1);
+}
+
+/* CLOSE BUTTON */
+#close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 1rem;
+  cursor: pointer;
+  max-width: 1rem;
+  max-height: 1rem;
+}
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 500px) {
+  .content {
+      gap: .5rem;
+      padding: 1rem 2.5rem;
+  }
+  .quick-tools {
+      justify-content: space-around;
+      gap: 0.5rem;
+  }
+}
