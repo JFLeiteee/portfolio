@@ -7,6 +7,7 @@ import { Context } from '../context/Context'
 import { useContext } from 'react'
 import Modal from '../components/modal'
 import { useSpring, animated } from '@react-spring/web'
+import Projects from '../components/Projects'
 
 export default function Home() {
 
@@ -27,25 +28,27 @@ export default function Home() {
 
     return(
         <>
-            <animated.div class="content" style={{filter: isModalOpen ? "blur(0.2rem)" : "none", ...fadeIn}}>
-                <div class="left-side">
-                    <img src={developerPhoto} alt="Developer photo" class="photo"/>
+            <animated.div className="content" style={{filter: isModalOpen ? "blur(0.2rem)" : "none", ...fadeIn}}>
+                <div className="left-side">
+                    <img src={developerPhoto} alt="Developer photo" className="photo"/>
                 </div>
 
-                <div class="right-side">
-                    <p class="name">I'm José Silva,</p> 
-                    <h1 class="highlight">A FRONTEND <br /> DEVELOPER</h1> 
-                    <p class="about">who dreams big and works hard to achieve my objectives!</p>
+                <div className="right-side">
+                    <p className="name">I'm José Silva,</p> 
+                    <h1 className="highlight">A FRONTEND <br /> DEVELOPER</h1> 
+                    <p className="about">who dreams big and works hard to achieve my objectives!</p>
                     
-                    <div class="quick-tools">
-                        <button class="social" id="github" onClick={() => handleClick("github")}><img src={githubIcon} alt="GITHUB" /></button>
-                        <button class="social" id="linkedin" onClick={() => handleClick("linkedin")}><img src={linkedinIcon} alt="LINKEDIN" /></button>
-                        <button class="social" id="curriculum" onClick={() => handleModal()}><img src={curriculumIcon} alt="CURRICULO" /></button>
-                        <button class="projects">See my projects</button>
+                    <div className="quick-tools">
+                        <button className="social" id="github" onClick={() => handleClick("github")}><img src={githubIcon} alt="GITHUB" /></button>
+                        <button className="social" id="linkedin" onClick={() => handleClick("linkedin")}><img src={linkedinIcon} alt="LINKEDIN" /></button>
+                        <button className="social" id="curriculum" onClick={() => handleModal()}><img src={curriculumIcon} alt="CURRICULO" /></button>
+                        <button className="projects-button">See my projects</button>
                     </div>
                 </div>
+
             </animated.div> 
 
+            <Projects />
             { isModalOpen ? <Modal /> : null }
         </>
     )
